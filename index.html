@@ -1,25 +1,44 @@
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Pax Vatikan</title>
+
 <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
-<header>
-<h1>🌍 Pax Vatikan</h1>
-<div id="turn">Tur : 1</div>
+<header id="topbar">
+
+<div class="logo">
+🌍 <span>Pax Vatikan</span>
+</div>
+
+<div class="gameinfo">
+
+<div id="turn">
+Tur : 1
+</div>
+
+<div id="date">
+1936
+</div>
+
+</div>
+
 </header>
 
-<div id="game">
+<main id="game">
 
-<div id="map">
+<section id="map">
 
-<div class="country italy" onclick="selectCountry('İtalya')">
-İtalya
+<div class="country uk" onclick="selectCountry('Birleşik Krallık')">
+BK
 </div>
 
 <div class="country france" onclick="selectCountry('Fransa')">
@@ -34,40 +53,49 @@ Almanya
 Avusturya
 </div>
 
-<div class="country russia" onclick="selectCountry('Rusya')">
-Rusya
-</div>
-
-<div class="country uk" onclick="selectCountry('Birleşik Krallık')">
-BK
+<div class="country italy" onclick="selectCountry('İtalya')">
+İtalya
 </div>
 
 <div class="country serbia" onclick="selectCountry('Sırbistan')">
 Sırbistan
 </div>
 
-<div id="vatican"
-onclick="selectCountry('Vatikan')">
+<div class="country russia" onclick="selectCountry('Rusya')">
+Rusya
+</div>
+
+<div id="vatican" onclick="selectCountry('Vatikan')">
 ✝
 </div>
 
+</section>
+
+<aside id="panel">
+
+<h2 id="countryName">
+Vatikan
+</h2>
+
+<div class="stats">
+
+<p>💰 Altın : <span id="gold">25</span>M</p>
+
+<p>⭐ Nüfuz : <span id="power">95</span></p>
+
+<p>⚔ Ordu : <span id="army">4</span></p>
+
+<p>🏛 Diplomasi : <span id="diplo">80</span></p>
+
 </div>
 
-<div id="panel">
-
-<h2>Vatikan</h2>
-
-<p>💰 Altın :
-<span id="gold">25</span>M</p>
-
-<p>⭐ Nüfuz :
-<span id="power">95</span></p>
-
-<p id="info">
+<div id="info">
 
 Avrupa savaşa hazırlanıyor...
 
-</p>
+</div>
+
+<div class="buttons">
 
 <button onclick="nextTurn()">
 
@@ -77,9 +105,12 @@ Sonraki Tur
 
 </div>
 
-</div>
+</aside>
+
+</main>
 
 <script src="script.js"></script>
 
 </body>
+
 </html>
